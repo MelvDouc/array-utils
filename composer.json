@@ -1,6 +1,13 @@
 {
     "name": "melvdouc/array-utils",
     "type": "library",
+    "description": "Some JavaScript-inspired array utility functions for my personal use.",
+    "keywords": [
+        "array",
+        "array methods",
+        "array utils"
+    ],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "MelvDouc\\ArrayUtils\\": "src/"
@@ -12,9 +19,18 @@
             "email": "melv.douc@gmaiL.com"
         }
     ],
+    "require": {
+        "php": ">=7.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "^10.3"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/MelvDouc/php-array-utils"
+        }
+    ],
     "scripts": {
         "test": "php ./vendor/phpunit/phpunit/phpunit"
     }
