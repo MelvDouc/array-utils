@@ -6,8 +6,8 @@ class ArrayUtils
 {
   /**
    * Check if every element in the array match a given condition.
-   * @param array<T> $arr The input array.
-   * @param callable(T, string|int, T[]): bool $predicate Whether a given element matches a condition.
+   * @param array $arr The input array.
+   * @param callable $predicate Whether a given element matches a condition.
    */
   public static function every(array $arr, callable $predicate): bool
   {
@@ -20,8 +20,8 @@ class ArrayUtils
 
   /**
    * Check if at least one element in the array matches a given condition.
-   * @param array<T> $arr The input array.
-   * @param callable(T, string|int, T[]): bool $predicate Whether a given element matches a condition.
+   * @param array $arr The input array.
+   * @param callable $predicate Whether a given element matches a condition.
    */
   public static function some(array $arr, callable $predicate): bool
   {
@@ -34,8 +34,8 @@ class ArrayUtils
 
   /**
    * Find an element in an array.
-   * @param array<T> $arr The input array.
-   * @param callable(T, string|int, T[]): bool $predicate Whether a given element matches the search.
+   * @param array $arr The input array.
+   * @param callable $predicate Whether a given element matches the search.
    * @return T|null The searched element or `null` if nothing was found.
    */
   public static function find(array $arr, callable $predicate): mixed
@@ -70,7 +70,7 @@ class ArrayUtils
   /**
    * Create an array of the given length and fill it with a callback function.
    * @param int $length The desired length.
-   * @param callable(int): mixed $callbackFn A function that returns the value of the array at a given index.
+   * @param callable $callbackFn A function that returns the value of the array at a given index.
    */
   public static function from(int $length, callable $callbackFn)
   {
@@ -84,10 +84,10 @@ class ArrayUtils
 
   /**
    * Group elements into an associative array of arrays.
-   * @param array<T> $arr An associative array is allowed.
-   * @param callable(T, string|int, array<T>): string|int $callbackFn A function which takes in the current element, current key and the input array,
+   * @param array $arr An associative array is allowed.
+   * @param callable $callbackFn A function which takes in the current element, current key and the input array,
    * and returns a string or integer to use as a key in the returned array.
-   * @return array<string|int, T[]> An associative array.
+   * @return array An associative array.
    */
   public static function groupBy(array $arr, callable $callbackFn): array
   {
@@ -104,10 +104,10 @@ class ArrayUtils
 
   /**
    * Sort an array in place using the bubble sort algorithm.
-   * @param array<T> $arr The input array.
-   * @param callable(T, T): int $sortFn A function that takes in two arguments representing two elements in the array.
+   * @param array $arr The input array.
+   * @param callable $sortFn A function that takes in two arguments representing two elements in the array.
    * It should return a positive number when the elements are to be swapped.
-   * @return array<T>
+   * @return array
    */
   public static function bubbleSort(array $arr, callable $sortFn)
   {
