@@ -36,7 +36,7 @@ class ArrayUtils
    * Find an element in an array.
    * @param array $arr The input array.
    * @param callable $predicate Whether a given element matches the search.
-   * @return T|null The searched element or `null` if nothing was found.
+   * @return mixed The searched element or `null` if nothing was found.
    */
   public static function find(array $arr, callable $predicate): mixed
   {
