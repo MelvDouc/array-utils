@@ -8,6 +8,7 @@
         "array utils"
     ],
     "license": "MIT",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "MelvDouc\\ArrayUtils\\": "src/"
